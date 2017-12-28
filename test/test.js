@@ -63,7 +63,6 @@ describe( 'compute-kurtosis', () => {
   xit('Wikipedia: Kurtosis (sample excess kurtosis)', () => {
     const data = [0, 3, 4, 1, 2, 3, 0, 2, 1, 3, 2, 0, 2, 2, 3, 2, 5, 2, 3, 999]
           .map(e => parseInt(e, 10));
-    console.log(data);
     const actual = kurtosis(data);
     const expected = 15.05;
     assert.closeTo(actual, expected, 0.01);
@@ -143,7 +142,6 @@ Frequency	7	33	58	116	125	126	121	107	56	37	25	4
         .reduce((p, c, i, a) => {
           let size = parseInt(litters[i], 10);
           let litter = (new Array(c)).fill(null).map(e => size);
-          console.log(c, size, litter);
           return p.concat(litter);
         }, []);
 
@@ -161,7 +159,6 @@ Frequency	7	33	58	116	125	126	121	107	56	37	25	4
 
   xit('should handle single value distributions', () => {
     const data = (new Array(10)).fill(null).map(e => 1);
-    console.log(data);
     const actual = kurtosis(data);
 
     const expected = 0;
