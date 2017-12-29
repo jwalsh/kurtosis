@@ -33,7 +33,9 @@
   "bugs": {
     "url": "https://github.com/compute-io/kurtosis/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "ascii-histogram": "^1.2.1"
+  },
   "devDependencies": {
     "chai": "1.x.x",
     "mocha": "1.x.x",
